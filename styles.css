@@ -3,7 +3,12 @@
 header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:#fffffff2;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;color:var(--navy)}.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover}
 nav{display:flex;gap:20px}nav a{text-decoration:none;font-weight:600}#menu{display:none}
-.hero{min-height:78vh;display:grid;place-items:center;padding:80px 8vw;color:#fff;background:linear-gradient(120deg,#0d2f46f2,#245b49b8),radial-gradient(circle at 80% 20%,#7ca7a0,transparent 38%),linear-gradient(160deg,#315c6a,#8fa99c)}
+.hero{min-height:78vh;display:grid;place-items:center;padding:80px 8vw;color:#fff;background:
+    linear-gradient(rgba(13,47,70,.55), rgba(36,91,73,.45)),
+    url("IMG_0196.jpeg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;}
 .hero>div{max-width:920px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:700;color:var(--teal)}.hero .eyebrow{color:#bfe5d4}
 h1,h2{font-family:Georgia,'Times New Roman',serif;color:var(--navy)}h1{font-size:clamp(2.8rem,7vw,6rem);line-height:.98;color:#fff;margin:.2em 0}h2{font-size:clamp(2rem,4vw,3.6rem);line-height:1.1}
 .btn{display:inline-block;margin-top:22px;padding:13px 20px;border-radius:999px;background:#fff;color:var(--navy);text-decoration:none;font-weight:700}
