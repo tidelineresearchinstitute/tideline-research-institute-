@@ -57,5 +57,26 @@ main,
 header,
 footer {
     position: relative;
-    z-index: 1;
+    z-index: body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 36px;
+    pointer-events: none;
+    z-index: 999;
+    background-repeat: repeat-y;
+    background-size: 36px auto;
 }
+
+body::before {
+    left: 0;
+    background-image: url("./EE0B727A-BDD7-45D3-A7BC-A9D5E7906455.png");
+}
+
+body::after {
+    right: 0;
+    background-image: url("./2909ADC6-A312-4CB1-B912-891F6A0771F9.png");
+}
+                        
