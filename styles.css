@@ -25,45 +25,37 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 8vw;back
                                                                                                                                
                                                                                                                                /* Fixed botanical side borders */
 
-.flower-border {
+/* Floral side borders */
+body::before,
+body::after {
+    content: "";
     position: fixed;
     top: 0;
-    bottom: 0;
-    width: 32px;
     height: 100vh;
-    z-index: 9999;
+    width: 42px;              /* adjust width to taste */
+    z-index: 0;
     pointer-events: none;
-
-    background-image: url("22F4DF89-DAC7-4CEB-851A-F9E4156E3056.png");
-    background-repeat: no-repeat;
-
-    /* Enlarges the image so each element shows only one side */
-    background-size: 200% 100%;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: top center;
 }
 
-.flower-border-left {
+/* Left border */
+body::before {
     left: 0;
-    background-position: left top;
+    background-image: url('EE0B727A-BDD7-45D3-A7BC-A9D5E7906455.png');
 }
 
-.flower-border-right {
+/* Right border */
+body::after {
     right: 0;
-    background-position: right top;
+    background-image: url('2909ADC6-A312-4CB1-B912-891F6A0771F9.png');
 }
 
-/* Leave room for the flowers */
-body {
-    padding-left: 32px;
-    padding-right: 32px;
-}
-
-@media (max-width: 768px) {
-    .flower-border {
-        width: 24px;
-    }
-
-    body {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
+/* Keep the page content above the borders */
+main,
+header,
+footer {
+    position: relative;
+    z-index: 1;
 }
