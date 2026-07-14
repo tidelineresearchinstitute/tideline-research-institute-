@@ -18,52 +18,52 @@ article,.panel{padding:25px;background:#fff;border:1px solid var(--line);border-
 .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;background:var(--navy);color:#fff}.contact h2{color:#fff}.panel{color:var(--ink)}
 footer{display:flex;justify-content:space-between;gap:20px;padding:28px 8vw;background:#071c2a;color:#dbe7e7;font-size:.9rem}
 @media(max-width:900px){#menu{display:block}nav{display:none;position:absolute;top:77px;left:0;right:0;padding:20px;background:#fff;flex-direction:column}nav.open{display:flex}.grid,.grid.three,.gallery,.contact{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.grid,.grid.three,.gallery,.contact{grid-template-columns:1fr}footer{flex-direction:column}.brand span{max-width:190px;line-height:1.1}}
+@media(max-width:600px){.grid,.grid.three,.gallery,.contact{grid-template-columns:1fr}footer{flex-direction:column}.brand span{max-width:190px;line-height:
 
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               
+                                                                                                                               /* Fixed botanical side borders */
 
-/* ==========================================
-   Fixed Flower Borders
-========================================== */
+.flower-border {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
 
-.flower-border{
-    position:fixed;
-    top:0;
-    bottom:0;
-    width:24px;
-    z-index:9999;
-    pointer-events:none;
+    background-image: url("22F4DF89-DAC7-4CEB-851A-F9E4156E3056.png");
+    background-repeat: no-repeat;
 
-    background-image:url("22F4DF89-DAC7-4CEB-851A-F9E4156E3056.png");
-    background-repeat:repeat-y;
-    background-position:top center;
-    background-size:24px auto;
+    /* Enlarges the image so each element shows only one side */
+    background-size: 200% 100%;
 }
 
-.flower-border-left{
-    left:0;
+.flower-border-left {
+    left: 0;
+    background-position: left top;
 }
 
-.flower-border-right{
-    right:0;
-    transform:scaleX(-1);
+.flower-border-right {
+    right: 0;
+    background-position: right top;
 }
 
-/* Keep content away from borders */
-body{
-    padding-left:24px;
-    padding-right:24px;
+/* Leave room for the flowers */
+body {
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
-@media (max-width:768px){
-
-    .flower-border{
-        width:16px;
-        background-size:16px auto;
+@media (max-width: 768px) {
+    .flower-border {
+        width: 24px;
     }
 
-    body{
-        padding-left:16px;
-        padding-right:16px;
+    body {
+        padding-left: 24px;
+        padding-right: 24px;
     }
-
 }
