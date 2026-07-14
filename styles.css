@@ -19,3 +19,51 @@ article,.panel{padding:25px;background:#fff;border:1px solid var(--line);border-
 footer{display:flex;justify-content:space-between;gap:20px;padding:28px 8vw;background:#071c2a;color:#dbe7e7;font-size:.9rem}
 @media(max-width:900px){#menu{display:block}nav{display:none;position:absolute;top:77px;left:0;right:0;padding:20px;background:#fff;flex-direction:column}nav.open{display:flex}.grid,.grid.three,.gallery,.contact{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.grid,.grid.three,.gallery,.contact{grid-template-columns:1fr}footer{flex-direction:column}.brand span{max-width:190px;line-height:1.1}}
+
+
+/* ==========================================
+   Fixed Flower Borders
+========================================== */
+
+.flower-border{
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:24px;
+    z-index:9999;
+    pointer-events:none;
+
+    background-image:url("22F4DF89-DAC7-4CEB-851A-F9E4156E3056.png");
+    background-repeat:repeat-y;
+    background-position:top center;
+    background-size:24px auto;
+}
+
+.flower-border-left{
+    left:0;
+}
+
+.flower-border-right{
+    right:0;
+    transform:scaleX(-1);
+}
+
+/* Keep content away from borders */
+body{
+    padding-left:24px;
+    padding-right:24px;
+}
+
+@media (max-width:768px){
+
+    .flower-border{
+        width:16px;
+        background-size:16px auto;
+    }
+
+    body{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+}
